@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="vending machine_style.css">
+        <script type="text/javascript" src="vending machine_js.js"></script>
+        <title>Index</title>
+    </head>
+    <body>
+        <div class="menu">
+            <input type="button" id="700" value="커피(700원)" onclick="buyDrink(id, value)">
+            <input type="button" id="1000" value="옥수수수염차(1000원)" onclick="buyDrink(id, value)">
+            <input type="button" id="500" value="물(500원)" onclick="buyDrink(id, value)">
+        </div>
+
+        <div class="coin">
+            <input type="button" id="price1" value="1000원" onclick="varBring(id)">
+            <input type="button" id="price2" value="500원" onclick="varBring(id)">
+            <input type="button" id="price3" value="100원" onclick="varBring(id)">
+        </div>
+        현재 금액 : 
+        <span id="result">0원</span>
+        <br/>
+        <br/>
+        구매 내역 :
+        <ul id="buyList">
+
+        </ul>
+    </body>    
+</html>

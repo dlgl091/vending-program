@@ -1,0 +1,8 @@
+.coin {margin-top: 25px;}
+
+div.menu::before {content: 'Menu : '; font-size: 20px;}
+div.coin::before {content: 'amount : '; font-size: 20px;}
+
+input {margin-left: 15px;}
+
+.done {color: red;}
