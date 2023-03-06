@@ -2,20 +2,26 @@
 function varBring(a) { // 투입금액을 현재 금액에 더함함
     const insertedCoin = document.getElementById(a).value;
     let idResult = document.getElementById("result").innerText;
-    
-    if (idResult == '0원') {
-        let insertedCount = 0
-        document.getElementById("result").innerText = insertedCoin;
-        insertedCount += parseInt(insertedCoin.slice(0,-1));
-        colorChange(insertedCount);
-    }
-    else {
-        let insertedCount = parseInt(idResult.slice(0,-1));
-        insertedCount += parseInt(insertedCoin.slice(0,-1));
-        idResult = insertedCount.toString() + '원';
-        document.getElementById("result").innerText = insertedCount.toString() + '원';
-        colorChange(insertedCount);
-    }
+	
+    let insertedCount = parseInt(idResult.slice(0,-1));
+    insertedCount += parseInt(insertedCoin.slice(0,-1));
+    idResult = insertedCount.toString() + '원';
+    document.getElementById("result").innerText = idResult;
+    colorChange(insertedCount);
+	
+//     if (idResult == '0원') {
+//         let insertedCount = 0
+//         document.getElementById("result").innerText = insertedCoin;
+//         insertedCount += parseInt(insertedCoin.slice(0,-1));
+//         colorChange(insertedCount);
+//     }
+//     else {
+//         let insertedCount = parseInt(idResult.slice(0,-1));
+//         insertedCount += parseInt(insertedCoin.slice(0,-1));
+//         idResult = insertedCount.toString() + '원';
+//         document.getElementById("result").innerText = insertedCount.toString() + '원';
+//         colorChange(insertedCount);
+//     }
 }
 
 function colorChange(total) { // 현재 금액에 따라 뽑을 수 있는 음료 표시
