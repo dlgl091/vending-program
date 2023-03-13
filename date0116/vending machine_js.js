@@ -45,10 +45,16 @@ function colorChange(total) { // 현재 금액에 따라 뽑을 수 있는 음�
 }
 
 function removeClass() { // 색상 원상복구
-    document.getElementById('1000').classList.remove('done');
-    document.getElementById('700').classList.remove('done');
-    document.getElementById('500').classList.remove('done');
+    $.each(['1000', '700', '500'], function(index, value) {
+        document.getElementById(value).classList.remove('done');
+    })
 }
+
+// function removeClass() { // 색상 원상복구 수정전 코드
+//     document.getElementById('1000').classList.remove('done');
+//     document.getElementById('700').classList.remove('done');
+//     document.getElementById('500').classList.remove('done');
+// }
 
 function buyDrink(b, dValue) { // 음료 구매
     const insertedCoin = parseInt(document.getElementById('result').innerText.slice(0,-1));
